@@ -10,7 +10,9 @@ export const Footer: React.FC = () => {
       <div className="max-w-screen-xl mx-auto flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
         {/* Logo y Descripción */}
         <div className="text-center md:text-left">
-          <div className="text-3xl font-bold mb-4">Pharmacy</div>
+        <div className="text-2xl font-bold">
+          Petro<span className="text-yellow-500">Perú</span>
+        </div>
           <p className="text-gray-400 text-sm">La farmacia de confianza con productos de salud de alta calidad.</p>
         </div>
 
@@ -62,7 +64,7 @@ export const Footer: React.FC = () => {
 
       {/* Copyright */}
       <div className="text-center mt-6 text-sm text-gray-400">
-        © 2024 Jhohannes. Todos los derechos reservados.
+        © 2024 Ajalcriña. Todos los derechos reservados.
       </div>
     </footer>
   );

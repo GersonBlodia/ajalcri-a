@@ -1,9 +1,9 @@
-import { PharmacyWebsite } from "@/components/MainComponent";
- 
+import {PetroPeruWebsite} from '../components/MainComponent';
+
 export default function Home() {
   return (
     <>
-      <PharmacyWebsite/>
+      <PetroPeruWebsite/>
     </>
   );
 }
