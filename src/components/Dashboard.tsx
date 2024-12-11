@@ -10,6 +10,7 @@ import {
   Title,
   Tooltip,
   Legend,
+  ChartOptions,
 } from "chart.js";
 import { Bar, Doughnut } from "react-chartjs-2";
 
@@ -107,7 +108,7 @@ export const RiskDashboard: React.FC = () => {
   const [selectedDataset, setSelectedDataset] = useState<keyof DataSets>("operational");
 
   // Opciones del gráfico con tipado
-  const chartOptions: ChartJS.ChartOptions = {
+  const chartOptions: ChartOptions = {
     responsive: true,
     plugins: {
       legend: {
@@ -119,6 +120,7 @@ export const RiskDashboard: React.FC = () => {
       },
     },
   };
+  console.log(chartOptions)
 
   // Función para cambiar el filtro
   const handleFilterChange = (filter: keyof DataSets): void => {
@@ -149,16 +151,15 @@ export const RiskDashboard: React.FC = () => {
         {/* Gráfico de Barras */}
         <div className="bg-white p-4 shadow-md rounded-lg">
           <h2 className="text-xl font-semibold text-center mb-4">Gráfico de Barras</h2>
-          <Bar data={dataSets[selectedDataset].data} options={chartOptions} />
+          <Bar data={dataSets[selectedDataset].data}   />
         </div>
 
         {/* Gráfico Circular */}
         <div className="bg-white p-4 shadow-md rounded-lg">
           <h2 className="text-xl font-semibold text-center mb-4">Gráfico Circular</h2>
-          <Doughnut data={dataSets[selectedDataset].data} options={chartOptions} />
+          <Doughnut data={dataSets[selectedDataset].data}   />
         </div>
       </div>
     </div>
   );
 };
- 
